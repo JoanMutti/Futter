@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="./assets/js/modules/hasToken.js"></script>
+    <script src="./assets/js/userData/putNombre.js" type="module"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/scss/profilestyle/profile.css">
+    <link rel="stylesheet" href="./assets/scss/cursosstyle/cursos.css">
+    <link rel="stylesheet" href="./assets/css/profileConf/configuracion.css">
+    <link rel="stylesheet" href="./assets/scss/cursosstyle/optionmenu.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/scss/cursosstyle/logo.css">
+
+
+    <script src="https://kit.fontawesome.com/13a70eeb73.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="main-header clearfix" role="header">
+
+        <div class="app-wrapper">
+            <div class="left-area hide-on-mobile">
+                <div class="app-header">
+
+                    <h1 class="logotext">futter</h1>
+                    <button class="close-menu">
+                        <svg width="24" height="24" fill="none" stroke="#51a380" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" class="feather feather-x">
+                            <defs />
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="left-area-content">
+                    <div class="profile">
+                        <div class="userletter"> <span></span> </div>
+
+                        <div class="profile-info">
+                            <a href="./profileConfig.html">
+                                <span class="profile-name" id="userName"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="page-link-list">
+                        <a href="./cursos.html" class="item-link " id="pageLink">
+                            <svg class="link-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" class="feather feather-home"
+                                viewBox="0 0 24 24">
+                                <defs />
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                                <path d="M9 22V12h6v10" />
+                            </svg> Inicio
+                        </a>
+                        <a href="./miscursos.html" class="item-link" id="pageLink">
+                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                            </svg> Mis cursos
+                        </a>
+
+                        <a href="./allnotas.html" class="item-link" id="pageLink">
+                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+                                <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+                            </svg> Notas
+                        </a>
+
+                        <a href="./profileConfig.html" class="item-link active" id="pageLink">
+                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0110 0v4" />
+                            </svg> Perfil
+                        </a>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+                <div class="btn-friendAndHelp">
+                    <a class="boton-explore" href="https://api.whatsapp.com/send?text=https://futter.cc/friendPage.html"
+                        target="_blank">
+                        Invitar un amigo/a <i class="far fa-laugh-beam"></i></a>
+                    <a class="boton-explore btn-helpy" target="Blank_" href="https://t.me/TovmasN"
+                        title="Soporte">Soporte <i class="far fa-question-circle"></i></a>
+
+                </div>
+
+                <button class="btn-log-out">Cerrar sesión</button>
+            </div>
+            <div class="right-area">
+                <div class="right-area-upper">
+                    <button class="menu-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-part-wrapper">
+                        <a href="./exploreCursos.html" class="boton-explore">Explorar cursos</a>
+
+
+                        <ul class="more-menu-list hide">
+                            <li><a href="exploreCursos.html">Explore</a></li>
+                            <a class="action-buttons btn-help" target="Blank_" href="https://t.me/TovmasN"
+                                title="Soporte"><i class="far fa-question-circle"></i></a>
+                        </ul>
+                    </div>
+
+                    <div class="action-buttons-wrapper">
+                        <a class="boton-explore"
+                            href="https://api.whatsapp.com/send?text=https://futter.cc/friendPage.html" target="_blank">
+                            Invitar un amigo/a </a>
+                        <a class="action-buttons btn-help" target="Blank_" href="https://t.me/TovmasN"
+                            title="Soporte"><i class="far fa-question-circle"></i></a>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="page-right-content" id="profile-dv">
+                    <div class="content-line content-line-hero">
+                        <div class="container">
+                            <div class="profile-card js-profile-card">
+                                <div class="profile-card__img">
+                                    <div class="userletter" id="userImg"> <span></span> </div>
+                                </div>
+
+
+
+
+                                <div class="profile-card__cnt js-profile-cnt">
+                                    <div class="profile-card__name" id="formPersonalData">
+                                        <input id="email" class="form-control" type="email" placeholder="Email"
+                                            name="email" disabled>
+                                        <input id="name" class="form-control" type="text" placeholder="Nombre"
+                                            name="name">
+                                        <input id="lastName" class="form-control" type="text" placeholder="Apellido"
+                                            name="lastName">
+                                        <input id="Region" class="form-control" type="text" placeholder="Region"
+                                            name="region" disabled>
+                                        <input id="fechaNacimiento" class="form-control" type="date"
+                                            placeholder="Fecha de nacimiento" name="fechaNacimiento" disabled>
+
+
+                                        <button class="custom-btn btn-guardar" id="submitProfileData">Guardar</button>
+                                    </div>
+
+
+
+
+
+
+                                </div>
+
+
+
+                            </div>
+                            <div class="interesting">
+
+                                <h3 style="text-transform: uppercase;"><i class="fab fa-gratipay"></i> Cambiar mis
+                                    intereses :</h3>
+
+
+                                <div class="roto">
+
+                                    <div id="change-int" class="sobreMi work ">
+
+
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <button id='btn-save-interests' class="custom-btn btn-guardar">Guardar</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./assets/js/intereses/pruebatagsperfil.js" type="module"></script>
+
+    <!-- <script src="./assets/js/profile/profile.js"></script> -->
+    <script src="./assets/js/profile/personalData.js"></script>
+    <script src="./assets/js/profile/prueba.js" type="module"></script>
+    <script src="assets/js/menu.js"></script>
+
+
+
+</body>
+
+</html>

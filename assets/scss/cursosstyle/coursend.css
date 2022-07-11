@@ -1,0 +1,12 @@
+.courses-end {
+    max-width: 100vh;
+
+}
+
+.grid-courses-end {
+
+    display: grid;
+    grid-template-columns: 20%20%20%20%20%;
+    margin: 2em 2em 2em 2em;
+
+}

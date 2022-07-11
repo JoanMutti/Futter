@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #232428;
+    --transparent: transparent;
+    --wraper-color: #0F1124;
+    --border-color: #293F80;
+    --left-area-color: linear-gradient(325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --first-font-color: white;
+    --secondary-font-color: #adadad;
+    --active-color: #5E17EB;
+    --btn-color: #37B3F3;
+    --right-area-upper: linear-gradient(325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --green-dark: #343a40;
+    --green-light: #e6f1ed;
+}
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox,
+select {
+    -webkit-appearance: none;
+}
+
+body {
+    background: var(--wraper-color);
+}
+
+.swal2-popup .swal2-title {
+    color: white !important;
+    font-size: 15px !important;
+
+}
+
+.title {
+    background: var(--btn-color);
+    color: #ffff;
+    text-align: center;
+    width: 100%;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border: none;
+    transition: 0.2s;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.title:nth-child(1) {
+    border-bottom-right-radius: 20px;
+}
+
+.form-modal-p {
+    position: relative;
+    width: 70%;
+    height: 50%;
+    max-width: 600px;
+    margin-top: 2em;
+
+    background: #fff;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 20px 0px rgb(0 0 0 / 10%);
+}
+
+.form-modal {
+    position: relative;
+    width: 450px;
+    height: auto;
+    margin-top: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1)
+}
+
+.form-modal-p button {
+    cursor: pointer;
+    position: relative;
+    text-transform: capitalize;
+    font-size: 1em;
+    z-index: 2;
+    outline: none;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.form-modal-p .btn {
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.8em 1em 0.8em 1em !important;
+    transition: 0.5s;
+    border: 1px solid #ebebeb;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.form-modal-p .login,
+.form-modal-p .signup {
+    background: var(--btn-color);
+    color: #fff;
+}
+
+.form-modal-p .login:hover,
+.form-modal-p .signup:hover {
+    background: var(--active-color);
+}
+
+.form-modal-p input {
+    position: relative;
+    width: 80%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    border-radius: 20px;
+    border: none;
+    background: #ebebeb;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+
+
+.form-modal-p input::-webkit-input-placeholder {
+    color: #222;
+}
+
+.form-modal-p h3 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.form-modal-p p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-modal-p p a {
+    color: var(--btn-color);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.form-modal-p p a:hover {
+    color: #222;
+}
+
+.form-modal-p i {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateX(-10%) translateY(-50%);
+}
+
+.recuperar-contraseña {
+    text-align: center;
+}
+
+/*hasta aca */
+
+.form-modal button {
+    cursor: pointer;
+    position: relative;
+    text-transform: capitalize;
+    font-size: 1em;
+    z-index: 2;
+    outline: none;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.form-modal .btn {
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.8em 1em 0.8em 1em !important;
+    transition: 0.5s;
+    border: 1px solid #ebebeb;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.form-modal .login,
+.form-modal .signup {
+    background: var(--btn-color);
+    color: #fff;
+}
+
+.form-modal .login:hover,
+.form-modal .signup:hover {
+    background: var(--active-color);
+}
+
+.form-toggle {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.form-toggle button {
+    width: 50%;
+    float: left;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border: none;
+    transition: 0.2s;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.form-toggle button:nth-child(1) {
+    border-bottom-right-radius: 20px;
+}
+
+.form-toggle button:nth-child(2) {
+    border-bottom-left-radius: 20px;
+}
+
+#login-toggle {
+    background: var(--btn-color);
+    color: #ffff;
+}
+
+.form-modal form {
+    position: relative;
+    width: 90%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#login-form,
+#signup-form {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 1em;
+}
+
+#signup-form {
+    display: none;
+}
+
+#login-form button,
+#signup-form button {
+    width: 80%;
+    margin: 10%;
+    margin-top: 0.5em;
+}
+
+/*recuperar contraseña */
+.new-password-toggle {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.new-password-toggle button {
+    width: 50%;
+    float: left;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border: none;
+    transition: 0.2s;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.new-password-toggle #new-password:nth-child(1) {
+    border-bottom-right-radius: 20px;
+}
+
+.new-password-toggle #new-password:nth-child(2) {
+    border-bottom-left-radius: 20px;
+}
+
+#new-password {
+    background: var(--btn-color);
+    color: #ffff;
+    width: 100%;
+}
+
+.btn-see-password {
+    background-color: #0072c6;
+
+}
+
+.input-flex {
+    display: flex;
+}
+
+.btn-see-password {
+    /* float: inherit; */
+    background-color: #0072c6;
+    position: relative;
+    float: inline-start;
+    display: inline;
+    margin: 20px;
+}
+
+
+/*///////////////////*/
+.form-modal input {
+    position: relative;
+    width: 100%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    border-radius: 20px;
+    border: none;
+    background: #ebebeb;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.form-modal input:focus,
+.form-modal input:active {
+    transform: scaleX(1.02);
+}
+
+.form-modal input::-webkit-input-placeholder {
+    color: #222;
+}
+
+.form-modal p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-modal p a {
+    color: var(--btn-color);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.form-modal p a:hover {
+    color: #222;
+}
+
+.form-modal i {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateX(-10%) translateY(-50%);
+}
+
+
+.-box-sd-effect:hover {
+    box-shadow: 0 4px 8px hsla(210, 2%, 84%, .2);
+}
+
+#password {
+    width: 90%;
+}
+
+.password {
+    cursor: pointer;
+    margin: 5px 5px 5px 18px;
+}
+
+
+@media only screen and (max-width:500px) {
+    .form-modal {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    i {
+        display: none !important;
+    }
+}

@@ -1,0 +1,382 @@
+// .fa-heart:hover {
+//     font-size: 28px;
+// }
+:root {
+    --body-color: #FFFFFF;
+    --transparent: transparent;
+    --wraper-color: #0F1124;
+    --border-color: #293F80;
+    --left-area-color: linear-gradient( 325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --first-font-color: white;
+    --secondary-font-color: #adadad;
+    --active-color: #5E17EB;
+    --btn-color: #37B3F3;
+    --right-area-upper: linear-gradient( 325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --green-dark: #343a40;
+    --green-light: #e6f1ed;
+}
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox, select {
+-webkit-appearance: none;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.note-list-li {
+	background: #f5f5f5;
+	padding: 0.5em;
+	margin: 0.1em auto;
+	font-size: 1.4em;
+	color: black;
+}
+.note-list-li:hover {
+	background-color: #293F80;
+	color:#FFFFFF;
+	
+}
+.note-list-li a {
+	color: black;
+	font-size: 0.8em;
+}
+.note-list-li a:hover {
+	color: #FFFFFF;
+}
+
+.blocks {
+	max-width: 350px;
+	width: 100%;
+	float: left;
+	padding: 0 1em;
+}
+
+#list {
+	cursor: pointer;
+	text-align: center;
+	padding: 0.9em;
+	margin: 1em 0 0 0;
+	border-radius: 10px 10px 0px 0px;
+	background-color: #37B3F3;
+	color: #FFFFFF;
+	font-size: 1.2em;
+}
+
+// #list:before {
+//     float: left;
+//     content: '\f055';
+//     color: #000;
+//     font-size: 1.3em;
+//     font-family: fontawesome;
+// }
+#note-list {
+	text-align: center;
+	list-style: none;
+	width: 100%;
+	padding: 0;
+	margin-top: 0;
+}
+
+@keyframes move1 {
+	from {
+		top: 25px;
+		opacity: 0;
+	}
+	to {
+		top: 70px;
+		opacity: 1;
+	}
+}
+
+#list:hover {
+	background: var(--btn-color);
+}
+
+.titular-notas {
+	font-size: 2em;
+	color: var(--first-font-color);
+}
+
+.lanota {
+	resize: none;
+	padding: 10px;
+	border-radius: 10px;
+	background: #ffffbe;
+	min-width: 200px;
+	max-width: 80%;
+	min-height: 300px;
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+	margin: auto;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0);
+	justify-content: space-between;
+}
+
+select {
+	width: 6em;
+	border-radius: 5px;
+	background-color: #37b3f3;
+	color: white;
+	font-weight: bold;
+}
+
+// .container-center {
+// 	text-align: center;
+// }
+.buttonsNotes{
+	display: flex;
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row; */
+    /* align-content: space-between; */
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-edit {
+	background-color: var(--btn-color);
+	border: none;
+	color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	width: 100%;
+	max-width: 160px;
+	margin: 0 auto;
+	display: block;
+	margin-top: 2em;
+	&:hover{
+		background-color: #5e17eb;
+	}
+}
+.btn-update {
+	background-color: var(--btn-color);
+	border: none;
+	color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	width: 100%;
+	max-width: 160px;
+	
+	display: block;
+	margin-top: 2em;
+	&:hover{
+		background-color: #5e17eb;
+	}
+}
+.btn-dont-save{
+	background-color: #BF0404;
+	border: none;
+	color: #fff;
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	width: 100%;
+	max-width: 160px;
+	
+	display: block;
+	margin-top: 2em;
+	&:hover{
+		background-color: #8C0303;
+	}
+}
+
+
+.intLink:hover {
+	background-image: linear-gradient(
+			217deg,
+			rgba(255, 0, 0, 0.8),
+			rgba(255, 0, 0, 0) 70.71%
+		),
+		linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+		linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+
+.intLink:after {
+	border: none;
+}
+
+.richText {
+	display: flex;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	transition: 600ms;
+}
+
+.fas {
+	font-size: 14px;
+	padding: 4px;
+	color: white;
+}
+
+.intLink {
+	border-radius: 10px;
+	padding: 10px;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	background: linear-gradient(0deg, #37b3f3, #5e17eb);
+	transition: 0.5s;
+}
+
+.richText .toolBar {
+	margin: 4px;
+	width: 100%;
+	min-width: 200px;
+	max-width: 100%;
+}
+
+/* .richText .textBox {
+    width: 100%;
+    min-width: 540px;
+    min-height: 200px;
+    border: 1px #aaaaaa solid;
+    overflow: scroll;
+} */
+
+#textBox #sourceText {
+	padding: 0;
+	margin: 0;
+	min-width: 498px;
+	min-height: 200px;
+}
+
+#editMode label {
+	cursor: pointer;
+}
+
+
+
+
+
+///dinamico
+.dinamic-no-notes{
+background: linear-gradient( 325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+
+	max-width: 500px;
+    max-height: 200px;
+    border-radius: 18px;
+    padding: 2em;
+    text-transform: uppercase;
+	text-align: center;
+	font-size: 1em;
+	.fa-grin-stars{
+		color: #ffb213;
+    font-size: 1.5em;
+	}
+	h3{
+		color: white;
+	}
+	.go-to-courses{
+			background-color: var(--btn-color);
+			border: none;
+			color: #fff;
+			border-radius: 4px;
+			padding: 10px;
+			font-size: 14px;
+			line-height: 20px;
+			width: 100%;
+			max-width: 160px;
+			margin: 0 auto;
+			display: block;
+			margin-top: 2em;
+			&:hover{
+				background-color: #5e17eb;
+			}
+		
+	}
+}
+
+@media (min-width: 200px) and (max-width: 650px) {
+	.container-principal-notas {
+		display: flex;
+		flex-direction: column;
+		margin: 2em;
+		grid-gap: 1em;
+	}
+	.richText {
+		display: block;
+	}
+	.lanota {
+		max-width: 100%;
+		font-size: 1.5em;
+	}
+	select {
+		width: 6em;
+		height: 3em;
+	}
+	.fas {
+		font-size: 1.5em;}
+
+}
+
+@media (min-width: 651px) and (max-width: 850px) {
+	.container-principal-notas {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		margin: 2em;
+		grid-gap: 1em;
+	}
+	.richText {
+		display: block;
+	}
+	.lanota {
+		max-width: 90%;
+		font-size: 1.5em;
+
+	}
+	select {
+		width: 6em;
+		height: 3em;
+	}
+	.fas {
+		font-size: 1.5em;}
+}
+
+@media (min-width: 851px) and (max-width: 1200px) {
+	.container-principal-notas {
+		display: grid;
+		grid-template-columns: 33% 33% 33%;
+		grid-gap: 1em;
+		margin: 2em;
+	}
+	select {
+		width: 6em;
+		height: 3em;
+	}
+	.fas {
+		font-size: 1.5em;}
+		.lanota {
+			font-size: 1.5em;
+	
+		}
+}
+
+@media (min-width: 1201px) and (max-width: 1800px) {
+	.container-principal-notas {
+		display: grid;
+		grid-template-columns: 25% 25% 25% 25%;
+		margin: 2em;
+		grid-gap: 1em;
+	}
+	select {
+		width: 6em;
+		height: 3em;
+	}
+	.fas {
+		font-size: 1.5em;}
+		.lanota {
+			font-size: 1.5em;
+	
+		}
+}

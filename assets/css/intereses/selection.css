@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --body-color: #232428;
+    --transparent: transparent;
+    --wraper-color: #0f1124;
+    --border-color: #293f80;
+    --left-area-color: linear-gradient(325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --first-font-color: white;
+    --secondary-font-color: #adadad;
+    --active-color: #5e17eb;
+    --btn-color: #37b3f3;
+    --right-area-upper: linear-gradient(325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --green-dark: #343a40;
+    --green-light: #e6f1ed;
+}
+
+body {
+    background-color: #0f1124;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    color: #0f1124;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+p {
+    text-transform: capitalize;
+}
+
+.description {
+    padding: 20px 0 20px 0 !important;
+    font-weight: 400;
+}
+
+.selection-tags {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+}
+
+.wrapper {
+    background-color: white;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 25px;
+    padding: 20px 40px;
+}
+
+.field-wrap {
+    padding: 10px 0;
+    border-radius: 22px;
+    border: 1px solid #37b3f3;
+    overflow: hidden;
+}
+
+.checked {
+    background-color: var(--btn-color);
+}
+
+.field-wrap:hover {
+    cursor: pointer;
+    background-color: #37b3f3;
+    color: #ebebeb;
+}
+
+/* .field-wrap:hover p {
+    transform: translateX(10px);
+} */
+
+.field-wrap:hover .checkbox {
+    border-color: #fff;
+}
+
+.field-wrap p {
+    margin-left: 10px;
+    line-height: 30px;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+    font-size: 0.8vw;
+    text-align: center;
+
+}
+
+.checkbox {
+    margin-left: 10px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ebebeb;
+    border-radius: 15px;
+    transition-duration: 0.15s;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox:before {
+    content: '';
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 15px;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background-color: #f5a425;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+}
+
+.checkbox .checked {
+    border-color: #f5a425;
+}
+
+.checkbox .checked:before {
+    width: 10px;
+    height: 10px;
+}
+
+.boton-aceptar {
+    margin: 20px;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+        4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.btn-14 {
+    background-color: var(--btn-color);
+    border: none;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    max-width: 160px;
+    margin: 0 auto;
+    display: block;
+    margin-top: auto;
+}
+
+.btn-14:hover {
+    background-color: var(--active-color);
+}
+
+/**/
+.checkbox .check {
+    display: block;
+    position: absolute;
+    border: 5px solid #aaaaaa;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    top: 30px;
+    left: 20px;
+    z-index: 5;
+    transition: border 0.25s linear;
+    -webkit-transition: border 0.25s linear;
+}
+
+.checkbox:hover .check {
+    border: 5px solid #ffffff;
+}
+
+.checkbox .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    left: 5px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+    .selection-tags {
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
+
+@media (min-width: 150px) and (max-width: 500px) {
+    .selection-tags {
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .field-wrap {
+        font-size: 10px;
+        padding: 10px 0;
+        border-radius: 22px;
+        border: 1px solid #37b3f3;
+        overflow: hidden;
+        font-weight: bold;
+    }
+
+    .field-wrap p {
+        position: relative;
+        float: none;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .checkbox {
+        display: none;
+        width: 15px;
+        height: 15px;
+    }
+
+    .field-wrap .checked:before {
+        cursor: pointer;
+        background-color: #37b3f3;
+        color: #ebebeb;
+    }
+}
+
+@media (min-width: 150px) and (max-width: 400px) {
+    .selection-tags {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .field-wrap {
+        font-size: 10px;
+        padding: 10px 0;
+        border-radius: 22px;
+        border: 1px solid #37b3f3;
+        overflow: hidden;
+        font-weight: bold;
+    }
+
+    .field-wrap p {
+        position: relative;
+        float: none;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .checkbox {
+        display: none;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+@media (min-width: 150px) and (max-width: 1000px) {
+    .field-wrap {
+
+        font-weight: bold;
+    }
+
+    .field-wrap p {
+        text-align: center;
+
+        font-size: 1.8vh;
+    }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1800px) {
+    .field-wrap {
+
+        font-weight: bold;
+    }
+
+    .field-wrap p {
+        text-align: center;
+
+        font-size: 2vh;
+    }
+}

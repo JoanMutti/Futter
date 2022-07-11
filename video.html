@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="./assets/js/modules/hasToken.js"></script>
+    <script src="./assets/js/userData/putNombre.js" type="module"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/13a70eeb73.js" crossorigin="anonymous"></script>
+
+
+    <title>Creando el Futuro</title>
+
+    <!-- Bootstrap core CSS <link rel="stylesheet" href="./assets/scss/videopagestyle/chat.css"> -->
+
+    <link rel="stylesheet" href="./assets/scss/videopagestyle/playvideo.css">
+    <link rel="stylesheet" href="./assets/scss/videopagestyle/notas.css">
+    <link rel="stylesheet" href="./assets/scss/videopagestyle/valorateModal.css">
+    <link rel="stylesheet" href="./assets/scss/cursosstyle/optionmenu.css">
+    <link rel="stylesheet" href="./assets/scss/cursosstyle/logo.css">
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+    <header class="main-header clearfix" role="header">
+        <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
+        <div class="app-wrapper">
+            <!-- <div class="dark-light" style="display: none;">
+                <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                </svg>
+
+            </div> -->
+            <div class="left-area hide-on-mobile">
+                <div class="app-header">
+
+                    <h1 class="logotext">futter</h1>
+                    <button class="close-menu">
+                        <svg width="24" height="24" fill="none" stroke="#51a380" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" class="feather feather-x">
+                            <defs />
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="left-area-content">
+                    <div class="profile">
+                        <div class="userletter"> <span></span> </div>
+
+                        <div class="profile-info">
+                            <a href="./profileConfig.html">
+                                <span class="profile-name" id="userName"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="page-link-list">
+                        <a href="./cursos.html" class="item-link" id="pageLink">
+                            <svg class="link-icon" fill="none" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="2" class="feather feather-home"
+                                viewBox="0 0 24 24">
+                                <defs />
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                                <path d="M9 22V12h6v10" />
+                            </svg> Inicio
+                        </a>
+                        <a href="./miscursos.html" class="item-link" id="pageLink">
+                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                            </svg> Mis cursos
+                        </a>
+
+                        <a href="./allnotas.html" class="item-link" id="pageLink">
+                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+                                <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" />
+                            </svg> Notas
+                        </a>
+
+                        <a href="./profileConfig.html" class="item-link" id="pageLink">
+                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0110 0v4" />
+                            </svg> Perfil
+                        </a>
+
+                    </div>
+
+
+
+
+
+                </div>
+                <button class="btn-log-out">Cerrar sesión</button>
+            </div>
+            <div class="right-area">
+                <div class="right-area-upper">
+                    <button class="menu-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="titleCurso"></h1>
+                    <div id="valorar">
+
+                    </div>
+
+                </div>
+
+                <div class="page-right-content">
+
+                    <div class="content-line ">
+
+                        <div id="contentVideo">
+
+                        </div>
+
+                        <div class="left-container container">
+                            <div class="alt-autor">
+                                <p>Apoya a los creadores de contenido por su esfuerzo y entrega en cada video.
+                                    Suscríbete en su canal de YOUTUBE. </p>
+                            </div>
+                            <div class="bnt-next-last">
+
+                            </div>
+                            <div class="notesTitular">
+                                <h2 style="margin-bottom: 1px;">Notas</h2>
+                                <a id="noteOn" class="noteOption" onclick="noteYes()" style="display: none;">
+                                    <i class="fas fa-angle-double-down"></i>
+                                </a>
+                                <a id="noteOff" class="noteOption" onclick="noteNo()">
+                                    <i class="fas fa-angle-double-up"></i>
+                                </a>
+                            </div>
+                            <div id="noteSiNo" class="SectionNotes">
+
+                                <form name="compForm" id="compForm">
+                                    <div class="richText">
+                                        <input type="hidden" name="myDoc" />
+                                        <div id="toolBar1" class="ui-widget-header toolBar">
+                                            <select
+                                                onchange="formatDoc('formatblock',this[this.selectedIndex].value);this.selectedIndex=0;">
+                                                <option>style</option>
+                                                <option value="&lt;h1&gt;">Heading 1</option>
+                                                <option value="&lt;h2&gt;">Heading 2</option>
+                                                <option value="&lt;h3&gt;">Heading 3</option>
+                                                <option value="&lt;h4&gt;">Heading 4</option>
+                                                <option value="&lt;h5&gt;">Heading 5</option>
+                                                <option value="&lt;h6&gt;">Heading 6</option>
+                                                <option value="&lt;p&gt;">Paragraph</option>
+                                            </select>
+                                            <select
+                                                onchange="formatDoc('fontname',this[this.selectedIndex].value);this.selectedIndex=0;">
+                                                <option class="heading">Font</option>
+                                                <option>Arial</option>
+                                                <option>Arial Black</option>
+                                                <option>Courier New</option>
+                                                <option>Times New Roman</option>
+                                            </select>
+                                            <select
+                                                onchange="formatDoc('fontsize',this[this.selectedIndex].value);this.selectedIndex=0;">
+                                                <option class="heading"> Size </option>
+                                                <option value="1">10px</option>
+                                                <option value="2">13px</option>
+                                                <option value="3">15px</option>
+                                                <option value="4">18px</option>
+                                                <option value="5">24px</option>
+                                                <option value="6">32px</option>
+                                                <option value="7">36px</option>
+                                            </select>
+                                            <select
+                                                onchange="formatDoc('backcolor',this[this.selectedIndex].value);this.selectedIndex=0;">
+                                                <option class="heading">Resaltar</option>
+                                                <option value="red">Rojo</option>
+                                                <option value="aquamarine">Celeste</option>
+                                                <option value="yellow">Amarillo</option>
+                                            </select>
+                                        </div>
+                                        <!-- formatDoc('undo'); -->
+                                        <div id="toolBar2" class="ui-widget-header toolBar">
+                                            <button id="hola1un" class="undo intLink" type="button" title="Undo"
+                                                onclick="format('undo');"><i class="fas fa-reply"></i></button>
+                                            <button class="redo intLink" type="button" title="Redo"
+                                                onclick="formatDoc('redo');"><i class="fas fa-share"></i></button>
+                                            <button class="remove-format intLink" type="button"
+                                                title="Remove formatting" onclick="formatDoc('removeFormat');"><i
+                                                    class="fas fa-remove-format"></i></button>
+                                            <button class="bold intLink" type="button" title="Bold"
+                                                onclick="formatDoc('bold');"><i class="fas fa-bold"></i></button>
+                                            <button class="italic intLink" type="button" title="Italic"
+                                                onclick="formatDoc('italic');"><i class="fas fa-italic"></i></button>
+                                            <button class="underline intLink" type="button" title="Underline"
+                                                onclick="formatDoc('underline');"><i
+                                                    class="fas fa-underline"></i></button>
+                                            <button class="left-align intLink" type="button" title="Left align"
+                                                onclick="formatDoc('justifyleft');"><i
+                                                    class="fas fa-align-left"></i></button>
+                                            <button class="center-align intLink" type="button" title="Center align"
+                                                onclick="formatDoc('justifycenter');"><i
+                                                    class="fas fa-align-center"></i></button>
+                                            <button class="right-align intLink" type="button" title="Right align"
+                                                onclick="formatDoc('justifyright');"><i
+                                                    class="fas fa-align-right"></i></button>
+                                            <button class="numbered-list intLink" type="button" title="Numbered list"
+                                                onclick="formatDoc('insertorderedlist');"><i
+                                                    class="fas fa-list-ol"></i></button>
+                                            <button class="dotted-list intLink" type="button" title="Dotted list"
+                                                onclick="formatDoc('insertunorderedlist');"><i
+                                                    class="fas fa-list-ul"></i></button>
+                                            <button class="quote intLink" type="button" title="Quote"
+                                                onclick="formatDoc('formatblock','&lt;blockquote&gt;');"> <i
+                                                    class="fas fa-quote-left"></i></button>
+                                            <button class="outdent intLink" type="button" title="Add indentation"
+                                                onclick="formatDoc('outdent');"><i class="fas fa-outdent"></i></button>
+                                            <button class="indent intLink" type="button" title="Delete indentation"
+                                                onclick="formatDoc('indent');"><i class="fas fa-indent"></i></button>
+
+
+                                        </div>
+                                        <div id="textBox" class="textBox textarea" contenteditable="true"></div>
+                                        <!-- <p id="editMode"><input type="checkbox" name="switchMode" id="switchBox" onchange="setDocMode(this.checked);" /> <label for="switchBox">Show HTML</label></p> -->
+                                        <input class="btn-invite space" type="submit" value="Guardar" />
+                                    </div>
+                                </form>
+
+
+
+                            </div>
+                            <a id="linkTelegram" href="https://t.me/joinchat/1hhiaMWpHGViYmRh" target="_blank"
+                                class="link-telegram">
+                                <div class="go-chat">
+                                    <div class="Telegram-chat-icon"><i class="fab fa-telegram-plane"></i></div>
+                                    <div class="Telegram-text">
+                                        <p class="Telegram-text-p">Unete Al chat </p>
+                                    </div>
+
+                                </div>
+                            </a>
+                            <div class="menu-box block">
+
+                                <div class="contTitulares">
+                                    <h2 class="titular">Lista de reproduccion </h2>
+                                    <a href="#"><i id="listOn" class="fas fa-toggle-on titular" value="mostrar"
+                                            onclick="listYes()" style="display: none;"></i>
+                                        <i id="listOff" class="fas fa-toggle-off titular" value="ocultar"
+                                            onclick="listNo()"></i></a>
+                                </div>
+                                <ul id="listYesNo" class="menu-box-menu">
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- <section class="section courses" data-section="section4">
+    <div class="container-fluid">
+      <div class="row">
+       
+        <div id="slider-toto2"class="owl-carousel owl-theme">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+	-->
+    <script src="./assets/js/videopage/notas.js" type="module"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js//videopage/playicon.js"></script>
+    <script src="assets/js/menu.js"></script>
+
+    <!--     
+            <script src=" ./assets/js/videopage/chat.js"></script> -->
+    <script src="assets/js/videopage/video.js" type="module"></script>
+    <script src='./assets/js/videopage/notas-format.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --body-color: #FFFFFF;
+    --transparent: transparent;
+    --wraper-color: #0F1124;
+    --border-color: #293F80;
+    --left-area-color: linear-gradient(325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --first-font-color: white;
+    --secondary-font-color: #adadad;
+    --active-color: #5E17EB;
+    --btn-color: #37B3F3;
+    --right-area-upper: linear-gradient(325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --green-dark: #343a40;
+    --green-light: #e6f1ed;
+}
+
+/* 
+//zona intereses-  */
+
+.field-wrap {
+    background-color: #f6f6f6;
+    padding: 10px 0;
+    border-radius: 22px;
+    border: 1px solid #37b3f3;
+    font-size: 15px;
+    overflow: hidden;
+    font-weight: bolder;
+    text-transform: capitalize;
+
+}
+
+.checked {
+    background-color: var(--btn-color);
+}
+
+.field-wrap:hover {
+    cursor: pointer;
+    background-color: #37b3f3;
+    color: #ebebeb;
+}
+
+
+/* .field-wrap:hover p {
+    transform: translateX(10px);
+} */
+
+.field-wrap:hover .checkbox {
+    border-color: #fff;
+}
+
+.field-wrap p {
+    line-height: 20px;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    font-size: 1.5vh;
+    text-align: center;
+}
+
+.checkbox {
+    margin-left: 10px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ebebeb;
+    border-radius: 15px;
+    transition-duration: 0.15s;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox:before {
+    content: '';
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 15px;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background-color: #f5a425;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+}
+
+.checkbox .checked {
+    border-color: #f5a425;
+}
+
+.checkbox .checked:before {
+    width: 10px;
+    height: 10px;
+}

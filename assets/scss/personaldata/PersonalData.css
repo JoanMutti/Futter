@@ -1,0 +1,32 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox, select {
+  -webkit-appearance: none;
+}
+
+select {
+  width: 100%;
+  background-color: #ebebeb;
+  height: 50px;
+  color: black;
+  position: relative;
+  font-size: 1em;
+  padding: 0px 20px 0px 20px;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  border-radius: 20px;
+  border: none;
+  background: #ebebeb;
+  outline: none;
+  font-weight: bold;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+/*# sourceMappingURL=PersonalData.css.map */

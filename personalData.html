@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./assets/js/modules/hasToken.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css//loginstyle/login.css">
+    <link rel="stylesheet" type="text/css" href="./assets/scss/personaldata/PersonalData.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <script src="./assets/js/login/personalData.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+    <div class="form-modal">
+
+        <div class="form-toggle">
+            <div class="title">Bienvenido</div>
+        </div>
+
+
+        <div id="login-form">
+            <form id="personalData">
+                <input type="text" placeholder="Ingrese su nombre" id="nombre" name="nombre" required />
+                <input type="text" placeholder="Ingrese su apellido" name="apellido" id="apellido" required />
+                <input type="date" placeholder="Ingrese su fecha de nacimiento" name="fechaNacimiento"
+                    id="fechaNacimiento" min="1920-01-01" max="2021-12-31" required />
+                <span class="dropdown-el"><select id="sexo">
+                        <option for="sort-relevance">Hombre</option>
+                        <option for="sort-relevance">Mujer</option>
+                        <option for="sort-relevance">Prefiero no decirlo</option>
+
+                    </select></span>
+
+                <!-- <input id="country" type="text" placeholder="Ingrese su nacionalidad" name="nacionalidad"
+                    id="nacionalidad" required /> -->
+
+            </form>
+            <hr />
+            <button id="saveData" type="submit" class="btn login">Continuar</button>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./assets/js/login/countrySelect.js"></script>
+
+</body>
+
+</html>

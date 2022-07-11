@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css//loginstyle/login.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/13a70eeb73.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/landing/redirect.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+
+    <div class="form-modal">
+
+        <div class="form-toggle">
+            <button id="login-toggle" onclick="toggleLogin()">Iniciar Sesion</button>
+            <button id="signup-toggle" onclick="toggleSignup()">Registrarse</button>
+        </div>
+
+        <div id="login-form">
+            <form id="login">
+                <input type="text" placeholder="Ingrese correo electrónico" id="email" name="email" required />
+                <div class="input-flex">
+                    <input type="password" placeholder="Introducir la contraseña" name="password" id="password"
+                        required /><a class="btn-see-password" type="button" onclick="mostrarContrasena()">
+                        <i id="ver" onclick="seePass()" class="far fa-eye"></i><i id="ocultar" style="display: none;"
+                            onclick="noPass()" class="far fa-eye-slash"></i>
+                    </a>
+                </div>
+
+                <button type="submit" class="btn login">Iniciar Sesion</button>
+                <p><a href="./recuperarPassword.html">¿Olvidaste tu contraseña?</a></p>
+                <hr />
+
+            </form>
+        </div>
+
+        <div id="signup-form">
+            <form id='register'>
+                <input type="email" placeholder="Ingrese correo electrónico" id="emailRegister" name="email" required />
+
+                <div class="input-flex">
+                    <input type="password" placeholder="Crear contraseña" required id="passwordRegister"
+                        name="password" />
+                    <a class="btn-see-password" type="button" onclick="mostrarContrasenaLogin()">
+                        <i id="ver" onclick="seePass()" class="far fa-eye"></i><i id="ocultar" style="display: none;"
+                            onclick="noPass()" class="far fa-eye-slash"></i> </a>
+
+                </div>
+                <input type="password" placeholder="Repeat new password" name="password" id="password-repeat"
+                    required />
+                <button type="submit" class="btn signup">Crear cuenta</button>
+                <p>Al hacer click en <strong>crear cuenta</strong> significa que está de acuerdo con nuestros <a
+                        href="javascript:void(0)">terminos y condiciones</a>.</p>
+                <hr />
+
+        </div>
+
+    </div>
+
+    <script src="assets/js//login/login.js"></script>
+    <script src="assets/js//login/passwordSee.js"></script>
+
+</body>
+
+</html>

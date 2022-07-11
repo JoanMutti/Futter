@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --body-color: #FFFFFF;
+  --transparent: transparent;
+  --wraper-color: #0F1124;
+  --border-color: #293F80;
+  --left-area-color: linear-gradient( 325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+  --first-font-color: white;
+  --secondary-font-color: #adadad;
+  --active-color: #5E17EB;
+  --btn-color: #37B3F3;
+  --right-area-upper: linear-gradient( 325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+  --green-dark: #343a40;
+  --green-light: #e6f1ed;
+}
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox, select {
+  -webkit-appearance: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #232428;
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  color: orange;
+  margin: 10px 0;
+  font-size: 2em;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 85%;
+      grid-template-columns: 15% 85%;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #0F1124;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 45%;
+      grid-template-columns: 50% 45%;
+  grid-gap: 2em;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.roto {
+  overflow: scroll;
+  padding-bottom: 20px;
+  height: 85%;
+}
+
+h3 {
+  color: orange;
+  margin: 10px 0;
+  font-size: 1.25em;
+}
+
+/*ZONA EXPERIENCIA*/
+.sobreMi {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 15px;
+  padding: 10px;
+}
+
+.interesting {
+  width: 100%;
+  -webkit-box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+          box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+  border-radius: 12px;
+  position: relative;
+  padding: 15px;
+  background: #1a1d3a;
+  background: linear-gradient(325deg, #1a1d3a 0%, #212752 100%);
+  max-height: 100vh;
+}
+
+/*Sector habilidades*/
+h3 i {
+  color: #ffb300;
+  font-size: 24px;
+}
+
+.field-wrap {
+  background-color: #f6f6f6;
+  padding: 10px 0;
+  border-radius: 22px;
+  border: 1px solid #37b3f3;
+  font-size: 15px;
+  overflow: hidden;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.checked {
+  background-color: var(--btn-color);
+}
+
+.field-wrap:hover {
+  cursor: pointer;
+  background-color: #37b3f3;
+  color: #ebebeb;
+}
+
+/* .field-wrap:hover p {
+    transform: translateX(10px);
+} */
+.field-wrap:hover .checkbox {
+  border-color: #fff;
+}
+
+.field-wrap p {
+  line-height: 30px;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  font-size: 1.5vh;
+  text-align: center;
+}
+
+.checkbox {
+  margin-left: 10px;
+  float: left;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ebebeb;
+  border-radius: 15px;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox:before {
+  content: '';
+  position: absolute;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  border-radius: 15px;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background-color: #f5a425;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.checkbox .checked {
+  border-color: #f5a425;
+}
+
+.checkbox .checked:before {
+  width: 10px;
+  height: 10px;
+}
+
+.btn-help {
+  color: #FFFFFF;
+  font-size: 2.5em;
+}
+
+.btn-help:hover {
+  color: var(--active-color);
+}
+
+.help-btn {
+  color: var(--body-color);
+}
+
+.action-buttons-wrapper {
+  padding: 0 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-guardar {
+  background-color: #37B3F3;
+  border: none;
+  color: #fff;
+  border-radius: 14px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  max-width: 160px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.btn-guardar:hover {
+  background-color: #5E17EB;
+}
+
+/*hasta aca*/
+.profile-card {
+  width: 90%;
+  height: 100%;
+  min-height: 94%;
+  min-height: 460px;
+  -webkit-box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+          box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+  background: #1a1d3a;
+  background: linear-gradient(325deg, #1a1d3a 0%, #212752 100%);
+  border-radius: 12px;
+  position: relative;
+  padding-top: 100px;
+  max-height: 100vh;
+}
+
+.profile-card.active .profile-card__cnt {
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+}
+
+.profile-card.active .profile-card-message,
+.profile-card.active .profile-card__overlay {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+.profile-card.active .profile-card-form {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+.profile-card__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+  -webkit-box-shadow: 0px 5px 50px 0px #6c44fc, 0px 0px 0px 7px rgba(107, 74, 255, 0.5);
+          box-shadow: 0px 5px 50px 0px #6c44fc, 0px 0px 0px 7px rgba(107, 74, 255, 0.5);
+}
+
+.profile-card__img .userletter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #d92424;
+  background: linear-gradient(132deg, #d92424 19%, #2f3465 47%, #656a9a 86%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+.profile-card__img span {
+  font-size: 35px;
+  font-weight: 900;
+  display: block;
+  line-height: 20px;
+  color: #f6f6f6;
+}
+
+.profile-card__cnt {
+  margin-top: -35px;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media screen and (max-width: 899px) {
+  .app-wrapper {
+    height: 10vh;
+  }
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 1em 1em 1em 1em;
+  }
+  .profile-card {
+    width: 100%;
+  }
+  .roto {
+    overflow: unset;
+  }
+  .interesting {
+    max-height: 100%;
+  }
+  .right-area-upper {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  #profile-dv {
+    padding-bottom: 5em;
+  }
+}
+/*# sourceMappingURL=profile.css.map */

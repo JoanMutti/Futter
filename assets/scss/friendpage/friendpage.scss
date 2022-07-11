@@ -1,0 +1,197 @@
+:root {
+    --body-color: #FFFFFF;
+    --transparent: transparent;
+    --wraper-color: #0F1124;
+    --border-color: #293F80;
+    --left-area-color: linear-gradient( 325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --first-font-color: white;
+    --secondary-font-color: #adadad;
+    --active-color: #5E17EB;
+    --btn-color: #37B3F3;
+    --right-area-upper: linear-gradient( 325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --green-dark: #343a40;
+    --green-light: #e6f1ed;
+    --theme-bg-color: rgba(16 18 27 / 40%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&family=Roboto+Mono:wght@300&display=swap');
+body {
+   justify-content: center;
+   align-items: center;
+   font-family: 'Noto Sans SC', sans-serif;
+   color: #FFFFFF;
+   background: var(--left-area-color);
+}
+h1{
+  width: 100%;
+    white-space: nowrap;
+    font-size: 2em;
+    color: #FFFFFF;
+}
+i{
+  color: chartreuse;
+}
+em{
+  text-transform: uppercase;
+  color: var(--btn-color);
+  font-style: bold;
+}
+a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+
+.container{
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  max-height: 100vh;
+}
+.center {
+  background: var(--theme-bg-color);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 30px;
+ 
+  min-height: 480px;
+  padding: 30px;
+  backdrop-filter: blur(3px);
+
+}
+
+// .center {
+//   display: block;
+//   position: relative;
+//   background: var(--theme-bg-color);
+//   border-radius: 30px;
+//   width: 60%;
+//   height: 60%;
+//   min-height: 480px;
+//   padding: 30px;
+  
+//   display: flex;
+//   -webkit-box-align: center;
+//   -ms-flex-align: center;
+//   align-items: center;
+//   -webkit-backdrop-filter: blur(20px);
+//   backdrop-filter: blur(20px);
+//   justify-content: center;
+// }
+
+
+  .text-friend {
+    display: flex;
+    
+    flex-direction: row;
+    flex-wrap: nowrap;
+    // justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+//   .text-friend {
+//     display: grid;
+//     grid-template-columns: 50% 50%;
+// }
+
+.title{
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 16px;
+    z-index: 10000;
+    position: relative;
+    flex: 5;
+    max-width: 310px;
+    font-weight: 400;
+    color: #ccc;
+    text-align: left;
+    margin-top: -16px;
+}
+.goto {
+  background-color:var(--btn-color);
+   color: white;
+   border-radius: 5px;
+   border-style: none;
+   padding: 10px;
+   font-size: 14px;
+   line-height: 20px;
+   width: 100%;
+   max-width: 260px;
+   margin: 0 auto;
+   display: block;
+   margin-top: auto;
+   cursor:pointer;
+}
+.goto:hover {
+background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+           linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+           linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+
+@media screen and (max-width:875px) {
+
+  h1{
+    white-space: normal;
+  }
+  .container{
+    display: block;
+   }
+   .center{
+    display: block;
+    text-align: center;
+   }
+   
+   .title{
+     display: block;
+     margin: 0;
+    padding: 0;
+    max-width: 100%;
+   }
+ 
+   .text-friend{
+     display: block;
+   }
+img{width: 200px;}
+  }
+
+
+
+// @media (min-width: 551px) and (max-width:1000px) {
+ 
+// }
+// .neons {
+//    margin-top: 10rem;
+//    text-align: center;
+// }
+
+// .neons h1 {
+//   font-size: 9rem;
+//   text-align: center;
+//    font-weight: bold;
+//   -webkit-animation: glow 2s ease-in-out infinite alternate;
+//   -moz-animation: glow 2s ease-in-out infinite alternate;
+//   animation: glow 2s ease-in-out infinite alternate;
+// }
+
+// @-webkit-keyframes glow {
+//      from {
+//       color: #fff;
+//     text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+//   }
+  
+//   to {
+//      color: gray;
+//     text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+//   }
+// }

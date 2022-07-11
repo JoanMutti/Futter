@@ -1,0 +1,229 @@
+:root {
+    --body-color: #FFFFFF;
+    --transparent: transparent;
+    --wraper-color: #0F1124;
+    --border-color: #293F80;
+    --left-area-color: linear-gradient(325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --first-font-color: white;
+    --secondary-font-color: #adadad;
+    --active-color: #5E17EB;
+    --btn-color: #37B3F3;
+    --right-area-upper: linear-gradient(325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    --green-dark: #343a40;
+    --green-light: #e6f1ed;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+}
+
+.container-principal {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    grid-gap: 2.5em;
+    padding: 1em;
+    min-height: 90vh;
+    overflow: scroll;
+}
+
+.left-container-filters {
+    max-height: 82vh;
+    width: 100%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    margin: 3em;
+    overflow: scroll;
+}
+
+.rigth-container-courses {
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 300px;
+    margin: 2em 2em 2em 2em;
+    width: 93%;
+    grid-gap: 1em;
+    margin-bottom: 3em;
+}
+
+.titular-check {
+    background-color: var(--border-color);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+    padding: 1em;
+    color: var(--body-color);
+}
+
+.btn-actualizar {
+    background-color: var(--green-dark);
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    max-width: 160px;
+    margin: 0 auto;
+    display: block;
+    margin-top: auto;
+}
+
+.btn-actualizar:hover {
+    background-color: var(--secondary-font-color);
+}
+
+.img-preview {
+    height: 180px !important;
+}
+
+.check-list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 2px;
+    margin: 2em;
+}
+
+.no-combinacion {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(325deg, rgba(26, 29, 58, 1) 50%, rgba(33, 39, 82, 1) 50%);
+    border-radius: 10px;
+}
+
+
+/*responsivo*/
+
+@media screen and (max-width:1500px) {
+    .owl-item {
+        width: 100%;
+    }
+
+    .img-preview {
+        height: 180px !important;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .container-principal {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow-y: scroll;
+        padding-bottom: 8em;
+    }
+
+    .rigth-container-courses {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        overflow: unset;
+    }
+
+    .left-container-filters {
+        margin: 0;
+        overflow: unset;
+        min-height: 200px;
+    }
+
+    .no-combinacion {
+
+        width: 100%;
+        height: 250px;
+    }
+
+    title {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 200px) and (max-width:480px) {
+    .titular-check {
+        height: 40px;
+    }
+
+    .title {
+        font-size: 20px;
+        padding: 0.4em;
+    }
+
+    .check-list {
+        max-height: 200px;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        overflow: scroll;
+        max-height: 150px;
+        margin: 0.5em;
+    }
+}
+
+@media (min-width: 481px) and (max-width:800px) {
+    .check-list {
+        max-height: 200px;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        overflow: scroll;
+        max-height: 150px;
+        margin: 1em;
+        padding: 6px;
+    }
+
+    .titular-check {
+        height: 30px;
+    }
+
+    .title {
+        font-size: 18px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 650px) and (max-width:799px) {
+    .rigth-container-courses {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1em;
+        justify-items: center;
+    }
+}
+
+@media (min-width: 800px) and (max-width:950px) {
+    .container-principal {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .rigth-container-courses {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+@media (min-width: 950px) and (max-width:1199px) {
+    .container-principal {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .rigth-container-courses {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}

@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap");
+
+.logotext {
+        margin-left: 0.5em;
+        font-weight: 900;
+        margin-top: 0px;
+        margin-bottom: 0;
+        /* margin-left: 70px; */
+        text-transform: uppercase;
+        background: #020024;
+        background: linear-gradient(136deg, rgba(255, 102, 0, 1) 13%, rgba(88, 88, 255, 1) 30%, rgba(224, 205, 88, 1) 67%, rgba(242, 159, 5, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 35px;
+        font-family: 'Poppins', sans-serif;
+}

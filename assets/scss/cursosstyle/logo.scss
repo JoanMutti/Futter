@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
+
+.text {
+    font-weight: 900;
+    margin-left: 0.5em;    text-transform: uppercase;
+    background: #020024;
+    background: linear-gradient(136deg, rgba(255, 102, 0, 1) 13%, rgba(88, 88, 255, 1) 30%, rgba(224, 205, 88, 1) 67%, rgba(242, 159, 5, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logoimg {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 5.4px;
+    left: 5.4px;
+}
+
+.circle {
+    animation-name: rot;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+    animation-play-state: linear;
+    transform-style: preserve-3d;
+    position: absolute;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    align-self: center;
+    border-radius: 50%;
+    background: rgb(245, 164, 37);
+    background: linear-gradient(132deg, rgba(245, 164, 37, 1) 7%, rgba(246, 246, 246, 0.8522759445575105) 19%, rgba(245, 164, 37, 0.8634804263502276) 35%, rgba(246, 246, 246, 1) 88%, rgba(245, 164, 37, 0.692612079011292) 95%);
+    box-shadow: inset 0px -28px 54px -28px rgb(0 0 0 / 30%);
+}
+
+.circle .in-circle {
+    position: relative;
+    margin: 5px auto;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    border-radius: 50%;
+    /* border-top: 2px solid #aa4105; */
+    border-right: 2px solid #f6f6f6;
+    /* border-radius: 40px 40px 40px 40px; */
+    /* background: #fad36f; */
+    box-shadow: inset 7px 3px 2px -4px #f6f6f6;
+}
+
+/* .shadow {
+                    background: #f8f9fa;
+                    border-radius: 50%;
+                    bottom: -12px;
+                    filter: blur(10px);
+                    height: 12px;
+                    position: absolute;
+                    width: 60px;
+                    top: 60px;
+                    z-index: -1;
+                } */
+
+@keyframes rot {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,138 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    display: block;
+    width: 80%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-bottom: 0.5em;
+    /* align-items: center; */
+    font-family: inherit;
+    /* justify-content: center; */
+    display: inline-block;
+}
+
+.btn-14 {
+    background-color: #37B3F3;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    max-width: 160px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.btn-14:hover {
+    background-color: #5E17EB
+}
+
+.skillsIn {
+    padding: 1em;
+}
+
+.fas {
+    font-size: 15px;
+    cursor: pointer;
+    padding: 1px;
+}
+
+.bar {
+    max-width: 100%;
+}
+
+
+/* .select select {
+display: inline-block;
+width: 100%;
+cursor: pointer;
+padding: 10px 15px;
+outline: 0;
+border: 0;
+border-radius: 0;
+background: #e6e6e6;
+color: #7b7b7b;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+} */
+
+.fa-plus-square {
+    size: 100px !important;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+    /* demo only */
+}
+
+.custom-dropdown select {
+    background-color: white;
+    color: black;
+    font-size: inherit;
+    padding: .5em;
+    border: 0;
+    margin: 0;
+    border-radius: 3px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button;
+    /* hide default arrow in chrome OSX */
+}
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+.custom-dropdown::after {
+    /*  Custom dropdown arrow */
+    content: "\25BC";
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 1.2em;
+    top: 50%;
+    margin-top: -.5em;
+}
+
+.custom-dropdown::before {
+    /*  Custom dropdown arrow cover */
+    width: 2em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.div-select-skills-p {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    grid-gap: 10px;
+    padding: 15px;
+    margin: auto;
+}
+
+@media (min-width: 200px) and (max-width:650px) {
+    .skillsIn {
+        padding: 0;
+    }
+}
